@@ -38,7 +38,7 @@ class DNNC:
         self.tokenizer = AutoTokenizer.from_pretrained(self.args.bert_model)
 
         if path is not None:
-            state_dict = torch.load(path+'/pytorch_model.bin')
+            state_dict = torch.load(path+'/pytorch_model.bin', map_location=self.device)
             self.model = AutoModelForSequenceClassification.from_pretrained(path, state_dict=state_dict, config=self.config)
         else:
             self.model = AutoModelForSequenceClassification.from_pretrained(self.args.bert_model, config=self.config)

@@ -67,5 +67,10 @@
 	     "meeting_schedule",
 	     "rollover_401k",
 	     "income"
+	     ],
+
+    "shopping": ["oos",
+	     "order",
+	     "shopping_list"
 	     ]
 }
